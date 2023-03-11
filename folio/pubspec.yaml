@@ -31,10 +31,11 @@ dependencies:
   json_annotation: ^4.8.0
   riverpod_annotation: ^2.0.0
   collection: ^1.17.1
-  flex_color_scheme: ^6.1.2
+  flex_color_scheme: ^7.0.0-dev.2
   material_color_utilities: ^0.2.0
   google_fonts: ^4.0.3
   flutter_adaptive_scaffold: ^0.1.0
+  dynamic_color: ^1.6.2
   
   
 
