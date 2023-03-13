@@ -7,8 +7,8 @@ import 'package:folio/src/app_systems/providers/dark_mode_provider.dart';
 import 'package:folio/src/app_systems/providers/locale_provider.dart';
 import 'package:folio/src/app_systems/providers/supported_locales_provider.dart';
 import 'package:folio/src/app_systems/router/router.dart';
-import 'package:folio/src/app_systems/themes/colors/app_dark_flex_theme_data.dart';
-import 'package:folio/src/app_systems/themes/colors/app_light_flex_theme_data.dart';
+
+import 'package:folio/src/app_systems/themes/colors/brand_fcs.dart';
 
 
 /// The Widget that configures your application.
@@ -30,8 +30,8 @@ class MyApp extends ConsumerWidget {
     return MaterialApp.router(
       routerConfig: router, 
       // if we have dynamic color, that gets supplied to the theme functions as a parameter
-      theme: lightMidThemeData, 
-      darkTheme: darkMidThemeData, 
+      theme: brandThemeDataLight, 
+      darkTheme: brandThemeDataDark, 
       themeMode: appDarkThemeMode ? ThemeMode.dark : ThemeMode.light, 
       locale: _locale, 
       localizationsDelegates: AppLocalizations.localizationsDelegates, 
