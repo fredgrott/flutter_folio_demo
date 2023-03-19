@@ -4,12 +4,11 @@
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:folio/src/app_systems/services/dark_mode_service.dart';
+import 'package:folio/src/app_systems/services/localizations_service.dart';
 import 'package:folio/src/app_systems/services/logger_service.dart';
 import 'package:folio/src/app_systems/services/scaffold_key_services.dart';
 import 'package:folio/src/app_systems/services/scroll_service_provider.dart';
 import 'package:folio/src/app_systems/services/shared_prefs_service.dart';
-
-
 
 /// Triggered from bootstrap() to complete futures.
 Future<void> appInitProviders(ProviderContainer container) async {
@@ -25,4 +24,6 @@ Future<void> appInitProviders(ProviderContainer container) async {
   container.read(scaffoldMessengerServicePod);
 
   container.read(scrollServiceProvider);
+
+  container.read(localizationsServiceProvider);
 }
