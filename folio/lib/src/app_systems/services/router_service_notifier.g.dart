@@ -1,12 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'router_notifier.dart';
+part of 'router_service_notifier.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$routerNotifierHash() => r'd8083d5024902ebdab9670c43d68e65fb70c1bfa';
+String _$routerServiceNotifierHash() =>
+    r'd3bc2512f8c2bc3f939381dca441eae095a30d81';
 
 /// This notifier is meant to implement the [Listenable] our [GoRouter] needs.
 ///
@@ -22,18 +23,18 @@ String _$routerNotifierHash() => r'd8083d5024902ebdab9670c43d68e65fb70c1bfa';
 ///   2. It works as a complete replacement for [ChangeNotifier] (it's a [Listenable] implementation)
 ///   3. It allows for listening to multiple providers if needed (we do have a [Ref] now!).
 ///
-/// Copied from [RouterNotifier].
-@ProviderFor(RouterNotifier)
-final routerNotifierProvider =
-    AutoDisposeAsyncNotifierProvider<RouterNotifier, void>.internal(
-  RouterNotifier.new,
-  name: r'routerNotifierProvider',
+/// Copied from [RouterServiceNotifier].
+@ProviderFor(RouterServiceNotifier)
+final routerServiceNotifierProvider =
+    AutoDisposeAsyncNotifierProvider<RouterServiceNotifier, void>.internal(
+  RouterServiceNotifier.new,
+  name: r'routerServiceNotifierProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$routerNotifierHash,
+      : _$routerServiceNotifierHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef _$RouterNotifier = AutoDisposeAsyncNotifier<void>;
+typedef _$RouterServiceNotifier = AutoDisposeAsyncNotifier<void>;
 // ignore_for_file: unnecessary_raw_strings, subtype_of_sealed_class, invalid_use_of_internal_member, do_not_use_environment, prefer_const_constructors, public_member_api_docs, avoid_private_typedef_functions

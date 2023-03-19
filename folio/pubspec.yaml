@@ -47,7 +47,7 @@ dev_dependencies:
   # dcm extra lints rules as presets
   dart_code_metrics_presets: ^1.4.1
   # opinionated lint rule set
-  lint: ^2.0.1
+  lint: ^2.1.1
   build_runner: ^2.3.3
   freezed: ^2.3.2
   json_serializable: ^6.6.1
@@ -56,7 +56,7 @@ dev_dependencies:
   mocktail: ^0.3.0
   mockingjay: ^0.3.0
   golden_toolkit: ^0.15.0
-  
+    
 
 flutter:
   uses-material-design: true

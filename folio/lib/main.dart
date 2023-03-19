@@ -3,7 +3,8 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:folio/src/app_systems/providers/bootstrap.dart';
+import 'package:folio/src/app_systems/providers/app_bootstrap.dart';
+
 import 'package:folio/src/my_app.dart';
 
 void main() async {
@@ -11,7 +12,7 @@ void main() async {
       () async {
         runApp(
           UncontrolledProviderScope(
-            container: await bootstrap(),
+            container: await appBootstrap(),
             child: MyApp(),
           ),
         );

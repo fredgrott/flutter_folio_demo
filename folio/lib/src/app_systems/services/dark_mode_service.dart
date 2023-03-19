@@ -2,22 +2,20 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-/// DarkModeNotifier to track dark mode.
-///
-/// Usage is:
-/// ```
-/// var darkMode = ref.watch(darkModeProvider);
-/// ```
-///
-/// @author Fredrick Allan Grott.
-class DarkModeNotifier extends StateNotifier<bool> {
+part 'dark_mode_service.g.dart';
+
+@riverpod
+class DarkModeService extends _$DarkModeService {
   late SharedPreferences prefs;
 
-  DarkModeNotifier() : super(false) {
+  @override
+  bool build(){
     _init();
+
+    return false;
   }
 
   /// Use is

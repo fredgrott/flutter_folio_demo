@@ -2,8 +2,16 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:folio/src/app_systems/providers/scaffold_messenger_key_pod.dart';
+
+/// A provider whose value is the global scaffold messenger key passed to
+/// [MaterialApp].
+///
+// ignore: prefer-static-class
+final scaffoldMessengerKeyServicePod = Provider((ref) {
+  return GlobalKey<ScaffoldMessengerState>();
+});
 
 /// Returns the scaffold messenger associated with [scaffoldMessengerKeyPod].
 /// And the call will be:
@@ -16,9 +24,9 @@ import 'package:folio/src/app_systems/providers/scaffold_messenger_key_pod.dart'
 ///  ),
 ///);
 /// ```
-/// 
+///
 /// @author Fredrick Allan Grott.
 // ignore: prefer-static-class
-final scaffoldMessengerPod = Provider((ref) {
-  return ref.watch(scaffoldMessengerKeyPod).currentState!;
+final scaffoldMessengerServicePod = Provider((ref) {
+  return ref.watch(scaffoldMessengerKeyServicePod).currentState!;
 });

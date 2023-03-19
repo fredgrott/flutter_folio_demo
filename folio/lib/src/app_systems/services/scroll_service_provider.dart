@@ -5,11 +5,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-/// ScrollController is a ChangeNotifier as it is mutable thus need a
 /// ChangeNotifierProvider. Usage is this in a Consumer Widget:
 /// ```
 /// final sc = ref.watch(scrollControllerProvider);
 /// ```
-/// 
+///
+/// Needs to be implemented manually as it is legacy and not generatable
+/// by riverpod generator.
+///
 /// @author Fredrick Allan Grott.
-final scrollControllerProvider = ChangeNotifierProvider.autoDispose((ref) => ScrollController());
+final scrollServiceProvider =
+    ChangeNotifierProvider.autoDispose((ref) => ScrollController());

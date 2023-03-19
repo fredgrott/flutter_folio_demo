@@ -5,21 +5,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:folio/src/app_systems/logging/application_logger.dart';
-import 'package:folio/src/app_systems/providers/initialize_providers.dart';
-import 'package:folio/src/app_systems/providers/logger_provider.dart';
+import 'package:folio/src/app_systems/providers/app_init_providers.dart';
+import 'package:folio/src/app_systems/services/logger_service.dart';
+
 
 import 'package:folio/src/domain/models/asset_list.dart';
 import 'package:url_strategy/url_strategy.dart';
 
-
-
 /// Bootstrap the initialization logic including providers.
-/// Best practices is to use ProviderContainer only for initialization  and to use 
+/// Best practices is to use ProviderContainer only for initialization  and to use
 /// ref.watch and ref.read paired with the Consumer Widgets at the Screen level.
 ///
 /// @author Fredrick Allan Grott.
 // ignore: prefer-static-class
-Future<ProviderContainer> bootstrap() async {
+Future<ProviderContainer> appBootstrap() async {
   // Get binding of Flutter Engine for loading hooks
   final binding = WidgetsFlutterBinding.ensureInitialized();
 
@@ -44,15 +43,15 @@ Future<ProviderContainer> bootstrap() async {
   setPathUrlStrategy();
 
   final container = ProviderContainer(
-    // only for Flutter, dart apps require listening to container to get changes as 
+    // only for Flutter, dart apps require listening to container to get changes as
     // ProviderObserver plugs into the widget lifecycle.
     observers: [_Logger()],
   );
 
-  await initializeProviders(container);
-  
+  await appInitProviders(container);
+
   // set the global appLogger
-  appLogger = container.read(loggerProvider);
+  appLogger = container.read(loggerServiceProvider);
 
   return container;
 }

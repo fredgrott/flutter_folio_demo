@@ -6,7 +6,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:folio/src/app_systems/providers/locale_state_provider.dart';
+import 'package:folio/src/app_systems/services/locale_state_service.dart';
+
+
 
 class SharedScaffold extends ConsumerStatefulWidget  {
   final Widget child;
@@ -39,7 +41,7 @@ class _SharedScaffoldState extends ConsumerState<SharedScaffold> {
     if (widgetsBinding != null) {
       widgetsBinding.addPostFrameCallback((_) async {
         // Locale Startup Actions
-        ref.read(localeStateProvider.notifier).initLocale();
+        ref.read(localeStateServiceProvider.notifier).initLocale();
       });
     }
   }

@@ -3,10 +3,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:folio/src/app_systems/providers/dark_mode_provider.dart';
-import 'package:folio/src/app_systems/providers/locale_provider.dart';
-import 'package:folio/src/app_systems/providers/supported_locales_provider.dart';
-import 'package:folio/src/app_systems/router/router.dart';
+
+
+
+
+import 'package:folio/src/app_systems/services/dark_mode_service.dart';
+
+import 'package:folio/src/app_systems/services/locale_state_service.dart';
+import 'package:folio/src/app_systems/services/router_service.dart';
+
+import 'package:folio/src/app_systems/services/supported_locales_service.dart';
 
 import 'package:folio/src/app_systems/themes/colors/brand_fcs.dart';
 
@@ -18,14 +24,14 @@ class MyApp extends ConsumerWidget {
     BuildContext context,
     WidgetRef ref,
   ) {
-    final router = ref.watch(routerProvider);
+    final router = ref.watch(routerServiceProvider);
 
-    final appDarkThemeMode = ref.watch(darkModeProvider);
+    final appDarkThemeMode = ref.watch(darkModeServiceProvider);
 
-    final List<Locale> _supportedLocales = ref.read(supportedLocalesProvider);
+    final List<Locale> _supportedLocales = ref.read(supportedLocalesServiceProvider);
 
     // Watch the current locale and rebuild on change
-    final Locale _locale = ref.watch(localeProvider);
+    final Locale _locale = ref.watch(localeStateServiceProvider).locale;
 
     return MaterialApp.router(
       routerConfig: router, 

@@ -7,7 +7,7 @@ import 'package:folio/src/app_systems/router/routes.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-part 'router_notifier.g.dart';
+part 'router_service_notifier.g.dart';
 
 /// This notifier is meant to implement the [Listenable] our [GoRouter] needs.
 ///
@@ -23,7 +23,7 @@ part 'router_notifier.g.dart';
 ///   2. It works as a complete replacement for [ChangeNotifier] (it's a [Listenable] implementation)
 ///   3. It allows for listening to multiple providers if needed (we do have a [Ref] now!).
 @riverpod
-class RouterNotifier extends _$RouterNotifier implements Listenable {
+class RouterServiceNotifier extends _$RouterServiceNotifier implements Listenable {
   VoidCallback? routerListener;
 
   /// Our application routes. Obtained through code generation.
@@ -31,13 +31,14 @@ class RouterNotifier extends _$RouterNotifier implements Listenable {
 
   @override
   Future<void> build() async {
-    ref.listenSelf((_, __,) {
+    ref.listenSelf((
+      _,
+      __,
+    ) {
       if (state.isLoading) return;
       routerListener?.call();
     });
   }
-
-  
 
   /// Adds [GoRouter]'s listener as specified by its [Listenable].
   /// [GoRouteInformationProvider] uses this method on creation to handle its
@@ -58,8 +59,4 @@ class RouterNotifier extends _$RouterNotifier implements Listenable {
   void removeListener(VoidCallback listener) {
     routerListener = null;
   }
-
-
-
- 
 }
