@@ -1,3 +1,9 @@
+// Copyright 2023 Fredrick Allan Grott. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
+
+
 import 'dart:async';
 import 'dart:developer';
 
@@ -7,10 +13,16 @@ import 'package:folio/src/app_systems/providers/app_bootstrap.dart';
 
 import 'package:folio/src/my_app.dart';
 
+/// Serves as entry point of the application.
+/// 
+/// @author Fredrick Allan Grott.
 void main() async {
+  // runZoneGuarder will run the body of this function in an error zone
   runZonedGuarded<Future<void>>(
       () async {
+        // runApp inflates the widget attaches it the screen
         runApp(
+          // exposes the provided ProviderContainer to the widget tree
           UncontrolledProviderScope(
             container: await appBootstrap(),
             child: MyApp(),

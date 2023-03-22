@@ -1,0 +1,97 @@
+@startuml
+set namespaceSeparator ::
+
+class "devops_one::src::domain::entities::sample_item.dart::SampleItem" {
+  +int id
+}
+
+abstract class "devops_one::src::domain::infrastructure::widget_view.dart::WidgetView" {
+  +T2 state
+  +T1 widget
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "devops_one::src::domain::infrastructure::widget_view.dart::WidgetView"
+
+abstract class "devops_one::src::domain::infrastructure::widget_view.dart::StatelessView" {
+  +T1 widget
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "devops_one::src::domain::infrastructure::widget_view.dart::StatelessView"
+
+class "devops_one::src::my_app_widget.dart::MyAppWidget" {
+  +SettingsController settingsController
+  +Widget build()
+}
+
+"devops_one::src::my_app_widget.dart::MyAppWidget" o-- "devops_one::src::presentation::features::settings::settings_controller.dart::SettingsController"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "devops_one::src::my_app_widget.dart::MyAppWidget"
+
+class "devops_one::src::my_app_widget.dart::_MyAppWidget" {
+  +Widget build()
+}
+
+"devops_one::src::domain::infrastructure::widget_view.dart::StatelessView" <|-- "devops_one::src::my_app_widget.dart::_MyAppWidget"
+
+class "devops_one::src::presentation::features::sample::sample_item_details_widget.dart::SampleItemDetailsWidget" {
+  {static} +String routeName
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "devops_one::src::presentation::features::sample::sample_item_details_widget.dart::SampleItemDetailsWidget"
+
+class "devops_one::src::presentation::features::sample::sample_item_details_widget.dart::_SampleItemDetailsWidget" {
+  +Widget build()
+}
+
+"devops_one::src::domain::infrastructure::widget_view.dart::StatelessView" <|-- "devops_one::src::presentation::features::sample::sample_item_details_widget.dart::_SampleItemDetailsWidget"
+
+class "devops_one::src::presentation::features::sample::sample_item_list_widget.dart::SampleItemListWidget" {
+  +List<SampleItem> items
+  {static} +String routeName
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "devops_one::src::presentation::features::sample::sample_item_list_widget.dart::SampleItemListWidget"
+
+class "devops_one::src::presentation::features::sample::sample_item_list_widget.dart::_SampleItemListWidget" {
+  +Widget build()
+}
+
+"devops_one::src::domain::infrastructure::widget_view.dart::StatelessView" <|-- "devops_one::src::presentation::features::sample::sample_item_list_widget.dart::_SampleItemListWidget"
+
+class "devops_one::src::presentation::features::settings::settings_controller.dart::SettingsController" {
+  -SettingsService _settingsService
+  -ThemeMode _themeMode
+  +ThemeMode themeMode
+  +Future<void> loadSettings()
+  +Future<void> updateThemeMode()
+}
+
+"devops_one::src::presentation::features::settings::settings_controller.dart::SettingsController" o-- "devops_one::src::presentation::features::settings::settings_service.dart::SettingsService"
+"devops_one::src::presentation::features::settings::settings_controller.dart::SettingsController" o-- "flutter::src::material::app.dart::ThemeMode"
+"flutter::src::foundation::change_notifier.dart::ChangeNotifier" <|-- "devops_one::src::presentation::features::settings::settings_controller.dart::SettingsController"
+
+class "devops_one::src::presentation::features::settings::settings_service.dart::SettingsService" {
+  +Future<ThemeMode> themeMode()
+  +Future<void> updateThemeMode()
+}
+
+class "devops_one::src::presentation::features::settings::settings_widget.dart::SettingsWidget" {
+  +SettingsController controller
+  {static} +String routeName
+  +Widget build()
+}
+
+"devops_one::src::presentation::features::settings::settings_widget.dart::SettingsWidget" o-- "devops_one::src::presentation::features::settings::settings_controller.dart::SettingsController"
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "devops_one::src::presentation::features::settings::settings_widget.dart::SettingsWidget"
+
+class "devops_one::src::presentation::features::settings::settings_widget.dart::_SettingsWidget" {
+  +Widget build()
+}
+
+"devops_one::src::domain::infrastructure::widget_view.dart::StatelessView" <|-- "devops_one::src::presentation::features::settings::settings_widget.dart::_SettingsWidget"
+
+
+@enduml

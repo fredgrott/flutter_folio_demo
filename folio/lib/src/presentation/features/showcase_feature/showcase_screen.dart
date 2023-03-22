@@ -4,11 +4,10 @@
 
 import 'package:flutter/material.dart';
 
-class LabScreen extends StatelessWidget {
+class ShowcaseScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     throw UnimplementedError();
   }
-
 }

@@ -4,7 +4,6 @@
 
 import 'dart:convert';
 import 'dart:developer';
-
 import 'package:shared_preferences/shared_preferences.dart';
 
 // ignore: avoid_classes_with_only_static_members
@@ -19,7 +18,6 @@ class JsonLocalSync {
 
     return prefs.setString(key, jsonString,);
   }
-
   /// Get a Json object from local persistent storage.
   static Future<Map<String, dynamic>?> get({required String key}) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -36,7 +34,6 @@ class JsonLocalSync {
 
     return jsonDecode(jsonString) as Map<String, dynamic>;
   }
-
   static Future<bool> delete({required String key}) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     

@@ -10,5 +10,4 @@ class InfoScreen extends StatelessWidget {
     // TODO: implement build
     throw UnimplementedError();
   }
-
 }

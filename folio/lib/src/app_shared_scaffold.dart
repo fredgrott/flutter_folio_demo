@@ -2,36 +2,24 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-// ignore_for_file: unnecessary_null_comparison
-
 import 'package:flutter/material.dart';
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:folio/src/domain/models/locale_state_model.dart';
 
-
-
-
-class SharedScaffold extends ConsumerStatefulWidget  {
+class AppSharedScaffold extends ConsumerStatefulWidget {
   final Widget child;
-  const SharedScaffold({
-    super.key,
-    required this.child,
-  });
+
+  const AppSharedScaffold(this.child);
 
   @override
-  ConsumerState<SharedScaffold> createState() => _SharedScaffoldState();
+  ConsumerState<AppSharedScaffold> createState() => _AppSharedScaffoldState();
 }
 
-class _SharedScaffoldState extends ConsumerState<SharedScaffold> {
-
-  
-
-
-
+class _AppSharedScaffoldState extends ConsumerState<AppSharedScaffold> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return Container();
   }
 
   // initialize the locale

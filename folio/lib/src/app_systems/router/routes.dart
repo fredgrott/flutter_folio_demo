@@ -3,13 +3,12 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:folio/src/books_feature/books_screen.dart';
-import 'package:folio/src/home_feature/home_screen.dart';
-import 'package:folio/src/info_feature/info_screen.dart';
-import 'package:folio/src/lab_feature/lab_screen.dart';
-import 'package:folio/src/showcase_feature/showcase_screen.dart';
-
-import 'package:folio/src/uikits_feature/uikits_screen.dart';
+import 'package:folio/src/presentation/features/books_feature/books_screen.dart';
+import 'package:folio/src/presentation/features/home_feature/home_screen.dart';
+import 'package:folio/src/presentation/features/info_feature/info_screen.dart';
+import 'package:folio/src/presentation/features/lab_feature/lab_screen.dart';
+import 'package:folio/src/presentation/features/showcase_feature/showcase_screen.dart';
+import 'package:folio/src/presentation/features/uikits_feature/uikits_screen.dart';
 import 'package:go_router/go_router.dart';
 
 part 'routes.g.dart';

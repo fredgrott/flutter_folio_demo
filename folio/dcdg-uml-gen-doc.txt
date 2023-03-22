@@ -1,0 +1,16 @@
+generally its
+
+take the localization_gen out of lib/src/ folder and use
+
+flutter pub global run dcdg    --output=reports/docs/diagrams/src/diagrams.puml
+
+for mermaid its
+
+flutter pub global run dcdg  -b mermaid --output=reports/docs/diagrams/out
+
+to generate the puml file
+
+Then we run an IDE plugin to convert that file to a png file
+
+
+and then finally move localization_gen back to its original lib/src/ location.

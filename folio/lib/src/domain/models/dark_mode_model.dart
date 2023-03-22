@@ -5,10 +5,10 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-part 'dark_mode_service.g.dart';
+part 'dark_mode_model.g.dart';
 
 @riverpod
-class DarkModeService extends _$DarkModeService {
+class DarkModeModel extends _$DarkModeModel {
   late SharedPreferences prefs;
 
   @override
@@ -17,7 +17,6 @@ class DarkModeService extends _$DarkModeService {
 
     return false;
   }
-
   /// Use is
   /// ```
   /// Switch(
