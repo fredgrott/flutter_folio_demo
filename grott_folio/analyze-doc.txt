@@ -1,0 +1,7 @@
+To Run Dart Analyze its:
+
+flutter analyze > ./reports/analyzer_report.txt
+
+The > is the pipe output command and you put a relative file address after it including 
+the file output name.
+

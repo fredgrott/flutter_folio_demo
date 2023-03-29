@@ -36,8 +36,11 @@ dependencies:
   google_fonts: ^4.0.3
   boxy: ^2.0.8
   dynamic_color: ^1.6.2
-  layout: ^1.0.3
+  gap: ^2.0.1
+  flutter_adaptive_scaffold: ^0.1.2
+  flutter_platform_widgets: ^3.2.0
   
+    
   
 
 dev_dependencies:

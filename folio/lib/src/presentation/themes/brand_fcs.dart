@@ -4,10 +4,10 @@
 
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
-import 'package:folio/src/app_systems/themes/colors/brand_color_configurations.dart';
-import 'package:folio/src/app_systems/themes/colors/brand_sub_themes_data.dart';
-import 'package:folio/src/app_systems/themes/text_theme_dark.dart';
-import 'package:folio/src/app_systems/themes/text_theme_light.dart';
+import 'package:folio/src/presentation/themes/brand_color_configurations.dart';
+import 'package:folio/src/presentation/themes/brand_sub_themes_data.dart';
+import 'package:folio/src/presentation/themes/text_theme_dark.dart';
+import 'package:folio/src/presentation/themes/text_theme_light.dart';
 
 // Note: I prefer to take the dynamic color user generated color scheme input
 //       and blend with non-brand import color roles such as Tertiary background 

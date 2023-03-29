@@ -1,0 +1,30 @@
+GOLDENS
+
+flutter test --update-goldens
+
+
+NOTE: Screens are multiScreenGolden whereas widgest are
+               either GoldenBuilder.column or
+               DeviceBuilder
+
+LCOV Flutter Test Commands
+-the exanded parameter is the setting used for CI-Servers(I use in non CI Server runs as well)
+
+flutter test --coverage --reporter=expanded --coverage-path=./reports/coverage/lcov.info 
+
+Then you run genhtml according to how your platform has the genhtml perl tool
+
+for windows with LCOV installed under chocolately its:
+
+perl C:\ProgramData\chocolatey\lib\lcov\tools\bin\genhtml reports\coverage\lcov.info -o reports\coverage\html
+
+generally for other platforms its:
+
+$GENHTNL reports/coverage/lcov.info -o reports/coverage/html
+
+
+UNIT TEST REPORT
+
+flutter test --machine | tojunit --output reports/test/unittest.xml
+
+junit2html reports/test/unittest.xml reports/test/unittest.html

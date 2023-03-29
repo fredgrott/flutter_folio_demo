@@ -1,0 +1,2 @@
+flutter pub global activate -sgit https://github.com/rrousselGit/riverpod.git --git-path packages/riverpod_graph
+flutter pub pub global run riverpod_graph:riverpod_graph >reports/docs/provider_graph/graph.md
