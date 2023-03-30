@@ -4,12 +4,15 @@
 
 import 'package:flutter/material.dart';
 import 'package:grott_folio/src/application/app_ui_measures.dart';
-import 'package:grott_folio/src/presentation/widgets/desktop_nav_bar.dart';
-import 'package:grott_folio/src/presentation/widgets/mobile_nav_bar.dart';
 
-class NavBar extends StatelessWidget {
+class DesktopNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return AppUIMeasures.physicalWidth >= 600 ? DesktopNavBar() : MobileNavBar();
+    return SizedBox(
+      width: AppUIMeasures.physicalWidth,
+      height: 90,
+      child: const Text("Desktop NavBar"),
+    );
   }
+
 }
