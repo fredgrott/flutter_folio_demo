@@ -1,0 +1,13 @@
+Generates localization with added bonus of no context, i.e. S.name
+
+to generate the file that makes this happen run
+
+flutter pub run intl_utils:generate
+
+If you have arb files to upload to localizely for translation its run
+
+flutter pub run intl_utils:localizely_upload_main [--project-id <PROJECT_ID> --api-token <API_TOKEN> --arb-dir <ARB_DIR> --main-locale <MAIN_LOCALE> --branch <BRANCH> --[no-]upload-overwrite --[no-]upload-as-reviewed] --upload-tag-added <UPLOAD_TAG_ADDED> --upload-tag-updated <UPLOAD_TAG_UPDATED> --upload-tag-removed <UPLOAD_TAG_REMOVED>
+
+then to download the files run
+
+flutter pub run intl_utils:localizely_download [--project-id <PROJECT_ID> --api-token <API_TOKEN> --arb-dir <ARB_DIR> --download-empty-as <DOWNLOAD_EMPTY_AS> --download-include-tags <DOWNLOAD_INCLUDE_TAGS> --download-exclude-tags <DOWNLOAD_EXCLUDE_TAGS> --branch <BRANCH>]

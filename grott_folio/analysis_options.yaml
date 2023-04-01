@@ -17,6 +17,7 @@ analyzer:
   exclude:
     - "**/*.g.dart"
     - "build/**"
+    - "lib/generated/**"
   plugins:
      - dart_code_metrics
 dart_code_metrics:

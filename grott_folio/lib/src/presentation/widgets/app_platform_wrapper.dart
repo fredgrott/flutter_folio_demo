@@ -4,7 +4,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:grott_folio/generated/l10n.dart';
 import 'package:grott_folio/src/application/routes/routes.dart';
+import 'package:grott_folio/src/presentation/themes/brand_fcs.dart';
 
 // Note: The cross-platform scheme of flutter even with addition of
 //       3rd party libraries is imperfect and we often have to modify
@@ -32,11 +34,12 @@ class AppPlatformWrapper extends StatelessWidget {
       scaffoldMessengerKey: scaffoldMessengerKey, 
       // using go router instead of manually implementing router delegates
       routerConfig: router, 
-      theme: ThemeData.light(), 
-      darkTheme: ThemeData.dark(), 
+      theme: brandThemeDataLight, 
+      darkTheme: brandThemeDataDark, 
       themeMode: ThemeMode.dark, 
       locale: const Locale("en, us"), 
-      localizationsDelegates: AppLocalizations.localizationsDelegates, 
+      // for localizations without context via intl utils package
+      localizationsDelegates: const [S.delegate], 
       supportedLocales: AppLocalizations.supportedLocales, 
       debugShowCheckedModeBanner: false, 
       restorationScopeId: "Grott Folio",

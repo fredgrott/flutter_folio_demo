@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite errors="0" failures="0" tests="1" skipped="0" name="D:.fredgrttsstuff.GithubProjects.flutter_folio_demo.grott_folio.test.unit" timestamp="2023-03-26T18:33:56">
+  <testsuite errors="0" failures="0" tests="1" skipped="0" name="D:.fredgrttsstuff.GithubProjects.flutter_folio_demo.grott_folio.test.unit" timestamp="2023-03-31T15:54:26">
     <properties>
       <property name="platform" value="vm"/>
     </properties>
-    <testcase classname="D:.fredgrttsstuff.GithubProjects.flutter_folio_demo.grott_folio.test.unit" name="Plus Operator should add two numbers together" time="0.043"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.flutter_folio_demo.grott_folio.test.unit" name="Plus Operator should add two numbers together" time="0.042"/>
   </testsuite>
-  <testsuite errors="0" failures="0" tests="1" skipped="0" name="D:.fredgrttsstuff.GithubProjects.flutter_folio_demo.grott_folio.test.widget" timestamp="2023-03-26T18:33:56">
+  <testsuite errors="0" failures="0" tests="1" skipped="0" name="D:.fredgrttsstuff.GithubProjects.flutter_folio_demo.grott_folio.test.widget" timestamp="2023-03-31T15:54:26">
     <properties>
       <property name="platform" value="vm"/>
     </properties>
-    <testcase classname="D:.fredgrttsstuff.GithubProjects.flutter_folio_demo.grott_folio.test.widget" name="MyWidget should display a string of text" time="0.893"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.flutter_folio_demo.grott_folio.test.widget" name="MyWidget should display a string of text" time="0.903"/>
   </testsuite>
 </testsuites>

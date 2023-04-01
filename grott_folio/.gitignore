@@ -43,10 +43,5 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-# Ignore platform-specific goldens
-**/goldens/macos
-**/goldens/linux
-**/goldens/windows
-**/goldens/web
-**/goldens/ios
-**/goldens/android
+# don't check in golden failure output
+**/failures/*.png

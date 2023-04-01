@@ -3,12 +3,15 @@
 // license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
+import 'package:grott_folio/src/application/app_ui_measures.dart';
 
 class DesktopFooter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return SizedBox(
+      width: AppUIMeasures.physicalWidth,
+      height: 200,
+      child: const Text("Footer"),
+    );
   }
-
 }

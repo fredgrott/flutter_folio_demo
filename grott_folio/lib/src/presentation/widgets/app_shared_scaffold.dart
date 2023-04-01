@@ -15,6 +15,11 @@ import 'package:grott_folio/src/presentation/widgets/nav_bar.dart';
 //       the appbar and drawer together as part of the page or screen
 //       wrapper rather than use the scaffold app and drawer slots
 //       usually implemented using the stack widget.
+//
+//       Also keep in mind per widget unit testing page object patterns 
+//       the shared scaffold is where have the parent finder of the page object 
+//       testing patterns as that finder is grabbing the app screen to base 
+//       matchers on.
 
 // For Widget unit test mocking purposes as shared scaffold we usually
 // want included in the Widget unit test UI wrapper which means we need
@@ -26,7 +31,7 @@ import 'package:grott_folio/src/presentation/widgets/nav_bar.dart';
 // Benefits is that then I do not have to write the shared scaffold twice.
 // Do NOT MARK THIS AS FINAL OR CONST
 // ignore: prefer-static-class
-var appScreenIndex = 0;
+int appScreenIndex = 0;
 
 class AppSharedScaffold extends StatefulWidget {
   /// The appScreen that the scaffold UI encases.
@@ -98,10 +103,10 @@ class _AppSharedScaffoldState extends State<AppSharedScaffold> {
   void initState() {
     super.initState();
 
-    final widgetsBinding = WidgetsBinding.instance;
-    if (widgetsBinding != null) {
-      widgetsBinding.addPostFrameCallback((_) async {});
-    }
+    // no need to initialize localization here as using intl utils package
+    // gen to use localization via no context instead
+
+   
   }
 }
 
