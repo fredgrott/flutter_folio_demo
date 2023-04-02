@@ -136,7 +136,7 @@ extension BrandFlexColorAdjExt on Color {
             0,
             hsl.lightness + amount / 100,
           ),
-        ))
+        ),)
         .toColor();
   }
 
@@ -155,7 +155,7 @@ extension BrandFlexColorAdjExt on Color {
             0,
             hsl.lightness - amount / 100,
           ),
-        ))
+        ),)
         .toColor();
   }
 }

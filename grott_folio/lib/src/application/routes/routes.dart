@@ -15,10 +15,15 @@ import 'package:grott_folio/src/presentation/features/uikits_screen/uikits_scree
 import 'package:grott_folio/src/presentation/widgets/app_shared_scaffold.dart';
 
 
+
+
 // ignore: prefer-static-class
 final GoRouter router = GoRouter(
   routes: <RouteBase>[
     ShellRoute(builder: (BuildContext context, GoRouterState state, Widget child,) {
+      
+
+
       return AppSharedScaffold(appScreen: child,);
     }, 
     routes: <RouteBase>[

@@ -28,7 +28,8 @@ class AppInsets {
    // Margins
   // ignore: prefer-correct-identifier-length
   static const double cp = 16;
-  // MD3 spec has 24 which is somewhat wrong as of end of March 2023.
+  // MD3 spec has 24 which is somewhat wrong as of end of 
+  // March 2023.
   // ignore: prefer-correct-identifier-length
   static const double md = 20;
   // ignore: prefer-correct-identifier-length

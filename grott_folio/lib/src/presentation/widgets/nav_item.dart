@@ -32,6 +32,7 @@ class NavItem extends StatefulWidget {
 
 class _NavItemState extends State<NavItem> {
   bool _hovering = false;
+  // ignore: prefer-correct-identifier-length
   bool _hoveringUnselectedNavItemMobile = false;
 
   @override
@@ -113,7 +114,7 @@ class _NavItemState extends State<NavItem> {
             opacity: _hoveringUnselectedNavItemMobile ? 1 : 0, 
             curve: Curves.ease, 
             duration: const Duration(milliseconds: 200), 
-            child: _buildNavItemIndex(index: widget.index, indexTextSize: indexTextSize),
+            child: _buildNavItemIndex(index: widget.index, indexTextSize: indexTextSize,),
           ),
           Container(
                   margin: const EdgeInsets.only(

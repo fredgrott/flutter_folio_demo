@@ -9,6 +9,7 @@ import 'package:catcher/catcher.dart';
 import 'package:flutter/material.dart';
 import 'package:grott_folio/src/application/catcher/catcher_options.dart';
 import 'package:grott_folio/src/application/logging/application_logger.dart';
+import 'package:grott_folio/src/application/routes/nav_keys.dart';
 import 'package:grott_folio/src/domain/models/asset_list.dart';
 import 'package:grott_folio/src/presentation/widgets/app_platform_wrapper.dart';
 import 'package:logging/logging.dart';
@@ -16,7 +17,6 @@ import 'package:logging_appenders/logging_appenders.dart';
 import 'package:url_strategy/url_strategy.dart';
 
 void main() async {
-
   // initialize application logger set up
   ApplicationLogger.init(true);
 
@@ -30,7 +30,7 @@ void main() async {
 
   // Cache images in assets folder via using the Flutter Engine binding
   // lifecycle. Google Fonts package has it's own cache impl similar
-  // to this. Localization initialization is similar in impl but 
+  // to this. Localization initialization is similar in impl but
   // declared in the shared scaffold stateful widget instead.
   binding.deferFirstFrame();
   binding.addPostFrameCallback((_) {
@@ -49,18 +49,16 @@ void main() async {
   // on web sets not hash, on other platforms is a NOOP
   setPathUrlStrategy();
 
-
-
-
-
   runZonedGuarded<Future<void>>(
     () async {
       Catcher(
-        runAppFunction: () {
-          runApp(AppPlatformWrapper());
-        },
-        releaseConfig: releaseOptions,
-        debugConfig: debugOptions,
+          runAppFunction: () {
+            runApp(AppPlatformWrapper());
+          },
+          releaseConfig: releaseOptions,
+          debugConfig: debugOptions,
+          // needed for page mode
+          navigatorKey: rootNavigatorKey,
       );
     },
     (

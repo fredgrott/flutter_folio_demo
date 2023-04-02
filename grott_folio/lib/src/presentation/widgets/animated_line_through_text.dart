@@ -48,7 +48,7 @@ class AnimatedLineThroughText extends StatefulWidget {
     this.hasOffsetAnimation = false,
     this.hasSlideBoxAnimation = false,
     this.controller,
-    this.beginOffset = const Offset(0, 0),
+    this.beginOffset = const Offset(0, 0,),
     this.endOffset = const Offset(0.15, 0,),
     this.onTap,
     this.maxLines = 1,
