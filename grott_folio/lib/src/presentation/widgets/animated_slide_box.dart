@@ -37,12 +37,14 @@ class AnimatedSlideBox extends AnimatedWidget {
       visibleBoxAnimation ??
       Tween<double>(
         begin: 0,
+        // ignore: no-magic-number
         end: width - (hiddenFactor * 2),
       ).animate(
         CurvedAnimation(
           parent: controller,
           curve: Interval(
             0,
+            // ignore: no-magic-number
             0.5,
             curve: visibleBoxCurve,
           ),
@@ -56,6 +58,7 @@ class AnimatedSlideBox extends AnimatedWidget {
         CurvedAnimation(
           parent: controller,
           curve: Interval(
+            // ignore: no-magic-number
             0.5,
             1.0,
             curve: invisibleBoxCurve,
@@ -81,6 +84,7 @@ class AnimatedSlideBox extends AnimatedWidget {
             child: Container(
               color: boxColor, 
               width: visibleAnimation.value, 
+              // ignore: no-magic-number
               height: height - (hiddenFactor * 2),),),
           Positioned(
             top: 0,

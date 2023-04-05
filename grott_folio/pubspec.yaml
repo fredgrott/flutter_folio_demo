@@ -15,7 +15,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl: ^0.18.0
-  
+  fpdart: ^0.5.0
   equatable: ^2.0.5
   flutter_platform_widgets: ^3.2.0
   flutter_riverpod: ^2.3.2
@@ -33,6 +33,10 @@ dependencies:
   go_router: ^6.5.0
   url_launcher: ^6.1.10
   intl_utils: ^2.8.2
+  font_awesome_flutter: ^10.4.0
+  meta_seo: ^3.0.5
+  usage: ^4.1.0
+  
   
   
 
@@ -47,6 +51,7 @@ dev_dependencies:
   mockingjay: ^0.3.0
   shouldly: ^0.5.0+1
   page_object: ^0.2.0
+  
 
 dependency_overrides:
   intl: ">=0.17.0"

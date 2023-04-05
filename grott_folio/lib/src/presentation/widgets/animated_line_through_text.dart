@@ -38,6 +38,7 @@ class AnimatedLineThroughText extends StatefulWidget {
     required this.coverColor,
     required this.slideBoxColor,
     required this.slideBoxCoverColor,
+    // ignore: no-magic-number
     this.lineThickness = 2,
     this.heightFactor = 1,
     this.widthFactor = 1,
@@ -104,6 +105,7 @@ class _AnimatedLineThroughTextState extends State<AnimatedLineThroughText>
                     decoration: widget.isUnderlinedByDefault ? TextDecoration.underline : TextDecoration.none,
                     ), width: widget.width, maxLines: widget.maxLines,
                     ) else const SizedBox(width: 0, height: 0,), 
+                    // ignore: no-magic-number
                     Positioned(top: (textHeight / 2) - widget.lineThickness, 
                     child: Container(
                       color: widget.hoverColor, 
@@ -112,6 +114,7 @@ class _AnimatedLineThroughTextState extends State<AnimatedLineThroughText>
                     ),
                   ), 
                   Positioned(
+                    // ignore: no-magic-number
                     top: (textHeight / 2) - widget.lineThickness, 
                     child: Container(
                       color: widget.coverColor, 

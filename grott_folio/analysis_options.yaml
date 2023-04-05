@@ -115,7 +115,6 @@ dart_code_metrics:
     - avoid-top-level-members-in-tests: false
     - prefer-commenting-analyzer-ignores: false
     - avoid-dynamic: false
-    - no-magic-numbers: false
     - prefer-moving-to-variable: false
     - avoid-late-keyword: false
     - avoid-non-ascii-symbols: false

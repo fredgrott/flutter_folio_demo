@@ -10,6 +10,7 @@ class MobileFooter extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: AppUIMeasures.physicalWidth,
+      // ignore: no-magic-number
       height: 200,
       child: const Text("Footer"),
     );

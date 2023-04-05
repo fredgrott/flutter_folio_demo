@@ -23,6 +23,7 @@ class MobileNavBar extends StatelessWidget {
         horizontal: AppPaddings.paddingFour,
       ), 
       width: AppUIMeasures.physicalWidth, 
+      // ignore: no-magic-number
       height: 90, 
       child: Row(
         children: [

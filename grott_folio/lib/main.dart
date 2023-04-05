@@ -10,7 +10,8 @@ import 'package:flutter/material.dart';
 import 'package:grott_folio/src/application/catcher/catcher_options.dart';
 import 'package:grott_folio/src/application/logging/application_logger.dart';
 import 'package:grott_folio/src/application/routes/nav_keys.dart';
-import 'package:grott_folio/src/domain/models/asset_list.dart';
+import 'package:grott_folio/src/data/models/asset_list.dart';
+
 import 'package:grott_folio/src/presentation/widgets/app_platform_wrapper.dart';
 import 'package:logging/logging.dart';
 import 'package:logging_appenders/logging_appenders.dart';

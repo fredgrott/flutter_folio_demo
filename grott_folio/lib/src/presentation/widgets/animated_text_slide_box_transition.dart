@@ -99,6 +99,7 @@ class _AnimatedTextSlideBoxTransitionState extends State<AnimatedTextSlideBoxTra
             parent: controller,
             curve: Interval(
               0,
+              // ignore: no-magic-number
               0.35,
               curve: widget.visibleAnimationcurve,
             ),
@@ -110,7 +111,9 @@ class _AnimatedTextSlideBoxTransitionState extends State<AnimatedTextSlideBoxTra
           CurvedAnimation(
             parent: controller,
             curve: Interval(
+              // ignore: no-magic-number
               0.35,
+              // ignore: no-magic-number
               0.7,
               curve: widget.invisibleAnimationcurve,
             ),
@@ -129,6 +132,7 @@ class _AnimatedTextSlideBoxTransitionState extends State<AnimatedTextSlideBoxTra
     ).animate(
       CurvedAnimation(
         parent: controller,
+        // ignore: no-magic-number
         curve: Interval(0.6, 1.0, curve: widget.invisibleAnimationcurve,),
       ),
     );

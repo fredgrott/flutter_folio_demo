@@ -87,8 +87,10 @@ const FlexTones brandTonesDark = FlexTones.dark(
 extension BrandFlexColorAdjExt on Color {
   /// Brightens the color with the given integer percentage amount.
   /// Defaults to 10%.
+  // ignore: no-magic-number
   Color brighten([final int amount = 10]) {
     if (amount <= 0) return this;
+    // ignore: no-magic-number
     if (amount > 100) return Colors.white;
 
     return Color.fromARGB(
@@ -96,21 +98,27 @@ extension BrandFlexColorAdjExt on Color {
       math.max(
         0,
         math.min(
+          // ignore: no-magic-number
           255,
+          // ignore: no-magic-number
           red - (255 * -(amount / 100)).round(),
         ),
       ),
       math.max(
         0,
         math.min(
+          // ignore: no-magic-number
           255,
+          // ignore: no-magic-number
           green - (255 * -(amount / 100)).round(),
         ),
       ),
       math.max(
         0,
         math.min(
+          // ignore: no-magic-number
           255,
+          // ignore: no-magic-number
           blue - (255 * -(amount / 100)).round(),
         ),
       ),
@@ -119,8 +127,10 @@ extension BrandFlexColorAdjExt on Color {
 
   /// Lightens the color with the given integer percentage amount.
   /// Defaults to 10%.
+  // ignore: no-magic-number
   Color lighten([final int amount = 10]) {
     if (amount <= 0) return this;
+    // ignore: no-magic-number
     if (amount > 100) return Colors.white;
     // HSLColor returns saturation 1 for black, we want 0 instead to be able
     // lighten black color up along the grey scale from black.
@@ -134,6 +144,7 @@ extension BrandFlexColorAdjExt on Color {
           1,
           math.max(
             0,
+            // ignore: no-magic-number
             hsl.lightness + amount / 100,
           ),
         ),)
@@ -142,8 +153,10 @@ extension BrandFlexColorAdjExt on Color {
 
   /// Darkens the color with the given integer percentage amount.
   /// Defaults to 10%.
+  // ignore: no-magic-number
   Color darken([final int amount = 10]) {
     if (amount <= 0) return this;
+    // ignore: no-magic-number
     if (amount > 100) return Colors.black;
     // ignore: prefer-correct-identifier-length
     final HSLColor hsl = HSLColor.fromColor(this);
@@ -153,6 +166,7 @@ extension BrandFlexColorAdjExt on Color {
           1,
           math.max(
             0,
+            // ignore: no-magic-number
             hsl.lightness - amount / 100,
           ),
         ),)

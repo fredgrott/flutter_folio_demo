@@ -12,6 +12,7 @@ class DesktopNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: AppUIMeasures.physicalWidth,
+      // ignore: no-magic-number
       height: 90,
       child: BoxyRow(
         mainAxisSize: MainAxisSize.min,

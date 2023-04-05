@@ -88,6 +88,7 @@ class _NavItemState extends State<NavItem> {
                     coverColor: Theme.of(context).colorScheme.onPrimaryContainer, 
                     slideBoxColor: Theme.of(context).colorScheme.secondaryContainer, 
                     slideBoxCoverColor: Theme.of(context).colorScheme.onSecondaryContainer, 
+                    // ignore: no-magic-number
                     lineThickness: 4, 
                     textStyle: widget.titleStyle ?? widget.titleStyle ?? textTheme.headlineSmall?.copyWith(
                       fontSize: selectedTextSize, fontWeight: FontWeight.w400,
@@ -127,6 +128,7 @@ class _NavItemState extends State<NavItem> {
                       coverColor: Theme.of(context).colorScheme.primaryContainer, 
                       slideBoxColor: Theme.of(context).colorScheme.onSecondaryContainer, 
                       slideBoxCoverColor: Theme.of(context).colorScheme.secondaryContainer, 
+                      // ignore: no-magic-number
                       lineThickness: 4, 
                       textStyle: widget.titleStyle ?? textTheme.bodyLarge?.copyWith(
                         fontSize: unselectedTextSize, 

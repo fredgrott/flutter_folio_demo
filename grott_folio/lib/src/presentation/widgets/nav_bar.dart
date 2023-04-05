@@ -16,6 +16,7 @@ class NavBar extends StatelessWidget {
     return AppUIMeasures.physicalWidth >= AppScreenBreakpoints.mediumEnd
         ? SizedBox(
             width: AppUIMeasures.physicalWidth,
+            // ignore: no-magic-number
             height: 90,
             child: BoxyRow(
               mainAxisSize: MainAxisSize.min,
@@ -32,6 +33,7 @@ class NavBar extends StatelessWidget {
           )
         : SizedBox(
             width: AppUIMeasures.physicalWidth,
+            // ignore: no-magic-number
             height: 90,
             child: BoxyRow(
               mainAxisSize: MainAxisSize.min,

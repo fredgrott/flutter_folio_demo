@@ -17,6 +17,7 @@ class AppLogo extends StatelessWidget {
     this.title = "GROTT",
     this.titleColor = Colors.white,
     this.titleStyle,
+    // ignore: no-magic-number
     this.fontSize = 60,
 
   });
