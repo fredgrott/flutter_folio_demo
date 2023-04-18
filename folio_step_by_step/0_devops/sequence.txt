@@ -1,0 +1,21 @@
+Sequence
+
+Because several things are directly coupled together I include some 
+things beyond the traditional devops as it then becomes clear how 
+they fit together in flutter app design and development processes. It's 
+step by step so you can follow along.
+
+My own bias in devops is that I do not use instrumented testing as the device 
+preview added with proper goldens and widget testing is generally good enough
+to cover every test case.
+
+1. vscode_setup
+2. lint_setup
+3. logging_setup
+4. other platform stuff
+5. adaptive scaffold (and nav)
+6 theme setup
+8 state
+10. app_exception_capture
+11. test_setup (unit, goldens, instegrated, and yes BDD)
+12. beg_arch_setup

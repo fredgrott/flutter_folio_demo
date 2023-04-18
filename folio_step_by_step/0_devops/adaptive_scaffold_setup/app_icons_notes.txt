@@ -1,0 +1,16 @@
+raw image size is 1024x1024 as web and desktop have that as app icon size while mobile is smaller.
+adaptive background size needs to be 432x432 (as xxxhdpi is 108*4 => 432x432)
+adaptive foreground size needs to be 432x432 (as xxxhdpi is 108*4 => 432x432)
+android size 1024x1024
+ios 1024x1024
+windows 1024x1024
+macos 1024x1024
+linux 1024x1024
+
+**Use platform names in image files to separate those from the generated images
+  as those will then be put in assets/images. Currently no support for linux
+  but one can assume its just repurposing the windows launch image for now.
+
+
+To generate the icons at the command line execute
+flutter pub run flutter_launcher_icons

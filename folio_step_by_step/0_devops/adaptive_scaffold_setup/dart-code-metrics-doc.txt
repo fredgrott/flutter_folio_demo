@@ -1,0 +1,18 @@
+So generally to run dart code metrics we have this prefix:
+
+flutter pub run dart_code_metrics:metrics 
+
+And we have these parent commands:
+
+analyze              Collect code metrics, rules and anti-patterns violations.
+check-unused-code    Check unused code in *.dart files.
+check-unused-files   Check unused *.dart files.
+check-unused-l10n    Check unused localization in *.dart files.
+
+Parameters for the analyze command, example 
+
+
+flutter pub run dart_code_metrics:metrics analyze lib --reporter=html --output-directory=./reports/metrics
+
+Note that checksyle option outputs to console
+
